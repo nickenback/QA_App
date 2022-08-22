@@ -170,8 +170,8 @@ class FavoriteList : AppCompatActivity() {
         }
     }
 
-    override fun onPause(){
-        super.onPause()
-        mFavoriteRef!!.removeEventListener(mFavoriteListener)
-    }
+//    override fun onPause(){
+//        super.onPause()
+//        mFavoriteRef!!.removeEventListener(mFavoriteListener)
+//    }
 }

@@ -189,6 +189,22 @@ class QuestionDetailActivity : AppCompatActivity() {
 
     override fun onStart(){
         super.onStart()
+//        var user = FirebaseAuth.getInstance().currentUser
+//        var dataBaseReference = FirebaseDatabase.getInstance().reference
+//        if (user == null) {
+//
+//        } else {
+//            mFavoriteRef = dataBaseReference.child(FavoritePATH).child(user!!.uid).child(mQuestion.questionUid)
+//            mFavoriteRef.addChildEventListener(mFavoriteListener)
+//
+//        }
+//        update()
+
+
+    }
+
+    override fun onResume(){
+        super.onResume()
         var user = FirebaseAuth.getInstance().currentUser
         var dataBaseReference = FirebaseDatabase.getInstance().reference
         if (user == null) {
@@ -201,19 +217,15 @@ class QuestionDetailActivity : AppCompatActivity() {
         update()
 
 
-    }
-
-    override fun onResume(){
-        super.onResume()
 
 //        update()
     }
 
-    override fun onStop(){
-        super.onStop()
-        mFavoriteRef.removeEventListener((mFavoriteListener))
-        update()
-
-    }
+//    override fun onStop(){
+//        super.onStop()
+//        mFavoriteRef.removeEventListener((mFavoriteListener))
+//        update()
+//
+//    }
 
 }
